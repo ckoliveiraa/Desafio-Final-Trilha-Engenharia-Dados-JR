@@ -1,0 +1,21 @@
+# Banco de dados gerado localmente (não versionar)
+data/loja.db
+
+# Ambiente virtual
+venv/
+.venv/
+env/
+
+# Cache do Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Cache de testes
+.pytest_cache/
+
+# Arquivos de IDE / sistema
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

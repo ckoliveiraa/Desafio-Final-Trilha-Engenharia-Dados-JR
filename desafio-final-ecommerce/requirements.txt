@@ -1,0 +1,4 @@
+# Este projeto usa apenas a biblioteca padrão do Python (sqlite3 já vem incluso).
+# As dependências abaixo são opcionais, usadas apenas para os itens de bônus.
+
+pytest>=8.0        # testes automatizados (bônus)
