@@ -37,7 +37,7 @@ O desafio consolida três habilidades:
 - [ ] **Não commitar direto na `main`**: criar uma **branch de trabalho**
       (ex.: `feature/banco-de-dados`), desenvolver nela e depois abrir um
       **Pull Request** para a `main`.
-- [ ] Repositório **público** com o link entregue ao instrutor.
+- [ ] Repositório **público** com o link entregue no desafio dentro da plataforma.
 
 ### ⭐ Bônus (opcional)
 - [ ] Testes automatizados com `pytest`.
