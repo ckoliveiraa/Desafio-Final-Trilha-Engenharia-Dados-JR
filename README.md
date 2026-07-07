@@ -64,31 +64,11 @@ O desafio consolida três habilidades:
 6. Escreva o `README.md`.
 7. `git init` → primeiro commit → crie o repo no GitHub → `git push`.
 
-> Dica de Git — configuração inicial (só uma vez):
-> ```bash
-> git init
-> git branch -M main
-> git remote add origin https://github.com/SEU_USUARIO/SEU_REPO.git
-> ```
->
-> Dica de Git — fluxo de trabalho com branch (**não commite direto na `main`**):
-> ```bash
-> # 1. Crie e entre em uma branch de trabalho
-> git checkout -b feature/estrutura-inicial
->
-> # 2. Trabalhe e faça commits nessa branch
-> git add .
-> git commit -m "Cria estrutura inicial do projeto"
->
-> # 3. Envie a branch para o GitHub
-> git push -u origin feature/estrutura-inicial
->
-> # 4. No site do GitHub, abra um Pull Request da sua branch para a main
-> #    e faça o "merge" quando estiver pronto.
-> ```
->
-> 💡 Repita o ciclo (nova branch → commits → push → Pull Request) a cada
-> parte do projeto. Ex.: `feature/banco`, `feature/consultas`, `feature/menu`.
+> 💡 **Fluxo de Git esperado:** não trabalhe direto na `main`. Crie uma
+> **branch de trabalho** para cada parte do projeto (ex.: `feature/banco`,
+> `feature/consultas`, `feature/menu`), faça seus commits nela e depois abra
+> um **Pull Request** para a `main`. Pesquise os comandos que faltarem — faz
+> parte do aprendizado. 😉
 
 ---
 
