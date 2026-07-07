@@ -34,6 +34,9 @@ O desafio consolida três habilidades:
 - [ ] `requirements.txt` (mesmo que vazio/comentado) e `.gitignore`.
 - [ ] Estrutura de pastas organizada (ex.: `src/`, `data/`).
 - [ ] Histórico com **pelo menos 3 commits** com mensagens claras.
+- [ ] **Não commitar direto na `main`**: criar uma **branch de trabalho**
+      (ex.: `feature/banco-de-dados`), desenvolver nela e depois abrir um
+      **Pull Request** para a `main`.
 - [ ] Repositório **público** com o link entregue ao instrutor.
 
 ### ⭐ Bônus (opcional)
@@ -61,15 +64,31 @@ O desafio consolida três habilidades:
 6. Escreva o `README.md`.
 7. `git init` → primeiro commit → crie o repo no GitHub → `git push`.
 
-> Dica de Git:
+> Dica de Git — configuração inicial (só uma vez):
 > ```bash
 > git init
-> git add .
-> git commit -m "Estrutura inicial do projeto"
 > git branch -M main
 > git remote add origin https://github.com/SEU_USUARIO/SEU_REPO.git
-> git push -u origin main
 > ```
+>
+> Dica de Git — fluxo de trabalho com branch (**não commite direto na `main`**):
+> ```bash
+> # 1. Crie e entre em uma branch de trabalho
+> git checkout -b feature/estrutura-inicial
+>
+> # 2. Trabalhe e faça commits nessa branch
+> git add .
+> git commit -m "Cria estrutura inicial do projeto"
+>
+> # 3. Envie a branch para o GitHub
+> git push -u origin feature/estrutura-inicial
+>
+> # 4. No site do GitHub, abra um Pull Request da sua branch para a main
+> #    e faça o "merge" quando estiver pronto.
+> ```
+>
+> 💡 Repita o ciclo (nova branch → commits → push → Pull Request) a cada
+> parte do projeto. Ex.: `feature/banco`, `feature/consultas`, `feature/menu`.
 
 ---
 
