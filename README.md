@@ -13,6 +13,16 @@ O desafio consolida três habilidades:
 
 ---
 
+## ✅ Pré-requisitos
+
+Antes de começar este desafio, você precisa:
+
+- [ ] Ter concluído a **trilha de SQL**.
+- [ ] Ter concluído a **trilha de Python/Git e IA**.
+- [ ] Estar cursando a **pós** há **pelo menos 2 meses**.
+
+---
+
 ## 📋 Requisitos obrigatórios
 
 ### 1. Banco de dados (SQL)
