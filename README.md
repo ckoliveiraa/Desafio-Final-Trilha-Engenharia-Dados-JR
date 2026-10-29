@@ -18,7 +18,8 @@ Antes de começar este desafio, você precisa:
 
 - [ ] Ter concluído a **trilha de SQL**.
 - [ ] Ter concluído a **trilha de Python/Git e IA**.
-- [ ] Ter assistido às **aulas ao vivo** do **Projeto_olist**.
+- [ ] Ter assistido às **aulas ao vivo** do **Projeto_olist**
+      ([repositório do projeto](https://github.com/ckoliveiraa/pipeline-olist)).
 
 ---
 
