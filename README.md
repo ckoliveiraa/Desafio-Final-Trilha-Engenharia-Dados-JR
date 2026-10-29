@@ -1,15 +1,14 @@
 # 🏁 Desafio Final Trilha Engenharia Dados JR
 
-## 🎯 Objetivo
+## 🎯 O desafio final: o seu pipeline, do zero
 
-Construir uma pequena aplicação de terminal para uma **loja virtual**, que
-guarda seus dados em um banco **SQLite** e gera relatórios usando **Python**.
-Ao final, você deve **publicar o projeto no seu GitHub**.
+Quatro aulas construindo um pipeline sobre um dado que alguém escolheu para você.
+O desafio final é fazer tudo de novo com um dado que **você escolhe**, do arquivo
+de origem até os indicadores, com **Python, SQL, IA e git** — do jeito que fizemos
+com a Olist.
 
-O desafio consolida três habilidades:
-1. Modelar e consultar dados com **SQL**.
-2. Organizar e integrar código em **Python**.
-3. Versionar e publicar com **Git/GitHub**.
+O passo que não foi mostrado é o mais difícil de todos: **decidir sozinho quais
+perguntas o dado responde.**
 
 ---
 
@@ -19,87 +18,63 @@ Antes de começar este desafio, você precisa:
 
 - [ ] Ter concluído a **trilha de SQL**.
 - [ ] Ter concluído a **trilha de Python/Git e IA**.
-- [ ] Estar cursando a **pós** há **pelo menos 2 meses**.
+- [ ] Ter assistido às **aulas ao vivo** do **Projeto_olist**.
 
 ---
 
-## 📋 Requisitos obrigatórios
+## 📋 Requisitos do projeto
 
-### 1. Banco de dados (SQL)
-- [ ] Criar **pelo menos 4 tabelas** com relacionamento (chaves primária e estrangeira).
-      Sugestão: `clientes`, `produtos`, `pedidos`, `itens_pedido`.
-- [ ] Popular as tabelas com dados de exemplo (mínimo 5 clientes e 5 produtos).
-- [ ] Escrever consultas que usem: `JOIN`, `WHERE`, `GROUP BY` e uma função de
-      agregação (`SUM`, `COUNT` ou `AVG`).
-- [ ] Criar **uma `VIEW`** OU uma consulta de agregação mais elaborada.
+| Requisito | Como fica |
+|---|---|
+| **Fonte escolhida por você** | Um dataset do Kaggle ou uma API pública, sobre um tema que você conhece. A Olist também vale, desde que feita de outro jeito: outras perguntas, outros indicadores e outras transformações — não o pipeline do curso copiado. Se for Kaggle, a licença precisa permitir uso público, porque o repositório é público. |
+| **Duas tabelas ou mais** | Ligadas por uma chave, para existir pelo menos um `JOIN`. Não há mínimo de linhas. |
+| **Três camadas** | Dado bruto, dado transformado e indicadores, cada camada separada da outra. Os nomes são seus: `raw`, `refined` e `marts` no curso; `bronze`, `silver` e `gold` ou qualquer outro serve, desde que a separação exista. **Na camada bruta, nada é alterado.** |
+| **Testes unitários** | Testes com `pytest`, rodando com dado inventado e sem abrir o banco do projeto, como no passo 4.6. |
+| **Repositório público no GitHub pessoal** | Na sua conta, não em conta de empresa nem em fork do repositório do curso. |
+| **Histórico de commits** | O projeto construído aos poucos, com um commit por etapa e mensagem dizendo o que mudou — não o projeto inteiro em um commit só. O histórico é lido junto com o código: ele mostra a ordem em que as coisas aconteceram. |
+| **Dashboard** · _opcional_ | Se fizer, ele lê só da camada de indicadores, sem nenhum cálculo na tela, como o painel da seção 07. |
 
-### 2. Aplicação (Python)
-- [ ] Conectar ao banco usando o módulo `sqlite3`.
-- [ ] Organizar o código em **funções** (e, de preferência, em mais de um arquivo).
-- [ ] Ter um **menu no terminal** que deixa o usuário escolher qual relatório ver.
-- [ ] Usar **tratamento de erros** (`try/except`) em pelo menos um ponto.
+### 🤖 A IA entra em todas as etapas — e você confere todas
 
-### 3. GitHub
-- [ ] `README.md` explicando o projeto e **como rodar**.
-- [ ] `requirements.txt` (mesmo que vazio/comentado) e `.gitignore`.
-- [ ] Estrutura de pastas organizada (ex.: `src/`, `data/`).
-- [ ] Histórico com **pelo menos 3 commits** com mensagens claras.
-- [ ] **Não commitar direto na `main`**: criar uma **branch de trabalho**
-      (ex.: `feature/banco-de-dados`), desenvolver nela e depois abrir um
-      **Pull Request** para a `main`.
-- [ ] Repositório **público** com o link entregue no desafio dentro da plataforma.
+O README termina com uma seção curta: **em que etapa a IA errou ou assumiu algo
+que você não pediu, e como você descobriu** — quase sempre contando linhas antes
+e depois.
 
-### ⭐ Bônus (opcional)
-- [ ] Testes automatizados com `pytest`.
-- [ ] Ambiente virtual (`venv`).
-- [ ] Um gráfico simples (ex.: `matplotlib`) ou exportar um relatório em CSV.
-- [ ] Permitir que o usuário **cadastre** novos produtos/pedidos (INSERT via Python).
+> Um projeto em que a IA não errou nenhuma vez é um projeto em que ninguém conferiu.
 
 ---
 
-## 📦 O que entregar
+## 📝 O README do seu projeto
 
-1. Link do repositório público no GitHub.
-2. O `README.md` deve permitir que qualquer pessoa rode o projeto seguindo os passos.
+É a primeira coisa que a correção abre. Ele precisa ter:
 
----
+- [ ] A **fonte do dado** (link e, se for Kaggle, a licença).
+- [ ] O que é **uma linha de cada tabela**.
+- [ ] As **três camadas** e os **indicadores** que saem delas.
+- [ ] **Como rodar do zero**, em comandos, incluindo os testes.
+- [ ] A **seção sobre a IA**.
 
-## 💡 Passo a passo sugerido
-
-1. Desenhe no papel as tabelas e como elas se ligam.
-2. Escreva o `schema.sql` (tabelas) e o `seed.sql` (dados).
-3. Crie o `database.py` para conectar e montar o banco.
-4. Crie o `queries.py` com uma função para cada consulta.
-5. Crie o `main.py` com o menu que chama as consultas.
-6. Escreva o `README.md`.
-7. `git init` → primeiro commit → crie o repo no GitHub → `git push`.
-
-> 💡 **Fluxo de Git esperado:** não trabalhe direto na `main`. Crie uma
-> **branch de trabalho** para cada parte do projeto (ex.: `feature/banco`,
-> `feature/consultas`, `feature/menu`), faça seus commits nela e depois abra
-> um **Pull Request** para a `main`. Pesquise os comandos que faltarem — faz
-> parte do aprendizado. 😉
+Quem clona o repositório tem que chegar aos indicadores **só lendo o README**.
 
 ---
 
-## 🔒 Solução de referência (gabarito)
+## 📦 Entrega
 
-Existe uma resolução completa e funcional na pasta
-**[`desafio-final-ecommerce/`](./desafio-final-ecommerce/)**.
+O **link do repositório** deve ser entregue no **formulário dentro da
+plataforma**, na **Trilha de Engenharia de Dados JR**.
 
-> ⚠️ **LEIA COM ATENÇÃO — é de extrema importância que você faça o desafio sozinho.**
->
-> O aprendizado está no processo de **errar, pesquisar e resolver por conta própria**.
-> Copiar o gabarito anula todo o objetivo do desafio.
->
-> **Use a solução de referência apenas para:**
-> - tirar uma **dúvida pontual** quando estiver realmente travado (ex.: a sintaxe de um `JOIN`);
-> - **conferir/corrigir** o seu resultado **depois** de já ter tentado.
->
-> **Não use para:** copiar arquivos, ver a resposta antes de tentar, ou pular etapas.
->
-> 💡 Sugestão: só abra o gabarito depois de ter passado pelo menos **30 minutos**
-> tentando resolver o ponto em que travou.
+Projeto incompleto também se entrega: **uma etapa travada com a dúvida escrita
+no README vale mais que um projeto inteiro copiado.**
+
+---
+
+## 🔎 Critério principal
+
+É o do curso inteiro:
+
+- cada indicador tem um arquivo **`.sql`** de onde saiu;
+- cada decisão sobre o dado tem um **motivo escrito**;
+- o histórico do **git** conta a ordem em que as coisas aconteceram.
 
 ---
 
